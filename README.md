@@ -19,6 +19,7 @@ This repository is intentionally organized by Angular major. It grows one Angula
 | 17.x | `@stackline/angular-highcharts@17.0.0` | `highcharts@12.6.0` | [Open Angular 17](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-17?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 18.x | `@stackline/angular-highcharts@18.0.0` | `highcharts@12.6.0` | [Open Angular 18](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-18?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 19.x | `@stackline/angular-highcharts@19.0.0` | `highcharts@12.6.0` | [Open Angular 19](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-19?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
+| 20.x | `@stackline/angular-highcharts@20.0.0` | `highcharts@12.6.0` | [Open Angular 20](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-20?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 
 ## Angular 9
 
@@ -136,10 +137,20 @@ npm start
 
 The Angular 19 playground uses `@stackline/angular-highcharts@19.0.0` and `highcharts@12.6.0` through the Angular 19 APF/Ivy package line, with the same dynamic/static coverage validated for the public docs.
 
+## Angular 20
+
+```bash
+cd angular-20
+npm install
+npm start
+```
+
+The Angular 20 playground uses `@stackline/angular-highcharts@20.0.0` and `highcharts@12.6.0` through the Angular 20 APF/Ivy package line, with the same dynamic/static coverage validated for the public docs.
+
 ## Links
 
 - Package: https://www.npmjs.com/package/@stackline/angular-highcharts
 - Docs: https://alexandro.net/docs/angular/angular-highcharts/
-- Angular 19 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-19/
-- Angular 19 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-19/live/
+- Angular 20 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-20/
+- Angular 20 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-20/live/
 - Community: https://www.reddit.com/r/Stackline/
