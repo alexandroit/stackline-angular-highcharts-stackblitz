@@ -1,0 +1,3 @@
+{
+  "startCommand": "cd angular-9 && npm start"
+}
