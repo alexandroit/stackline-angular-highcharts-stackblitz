@@ -12,6 +12,7 @@ This repository is intentionally organized by Angular major. It grows one Angula
 | 10.x | `@stackline/angular-highcharts@10.0.0` | `highcharts@10.3.3` | [Open Angular 10](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-10?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 11.x | `@stackline/angular-highcharts@11.0.0` | `highcharts@10.3.3` | [Open Angular 11](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-11?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 12.x | `@stackline/angular-highcharts@12.0.0` | `highcharts@12.6.0` | [Open Angular 12](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-12?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
+| 13.x | `@stackline/angular-highcharts@13.0.0` | `highcharts@12.6.0` | [Open Angular 13](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-13?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 
 ## Angular 9
 
@@ -59,10 +60,20 @@ npm start
 
 The Angular 12 playground upgrades the line to `@stackline/angular-highcharts@12.0.0` and `highcharts@12.6.0`, including the modern validated chart surface and AOT-compatible APF package consumption.
 
+## Angular 13
+
+```bash
+cd angular-13
+npm install
+npm start
+```
+
+The Angular 13 playground uses `@stackline/angular-highcharts@13.0.0` and `highcharts@12.6.0` through the Angular 13 APF/Ivy package line. The dynamic route keeps unstable derived series out of live updates and leaves those examples in the static gallery.
+
 ## Links
 
 - Package: https://www.npmjs.com/package/@stackline/angular-highcharts
 - Docs: https://alexandro.net/docs/angular/angular-highcharts/
-- Angular 12 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-12/
-- Angular 12 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-12/live/
+- Angular 13 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-13/
+- Angular 13 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-13/live/
 - Community: https://www.reddit.com/r/Stackline/
