@@ -1,0 +1,15 @@
+{
+  "packageName": "@stackline/angular-highcharts",
+  "projectRoot": "angular2-highcharts/angular2-highcharts",
+  "framework": "angular",
+  "family": "angular-10",
+  "major": 10,
+  "exactVersion": "10.0.10",
+  "installMode": "npm-install",
+  "localInstallSource": "../../../dist",
+  "expectedExports": [],
+  "installCommand": "npm install --ignore-scripts",
+  "validateCommand": "npm run validate",
+  "buildCommand": "npm run build",
+  "generatedAt": "2026-04-08T22:22:37.814Z"
+}
