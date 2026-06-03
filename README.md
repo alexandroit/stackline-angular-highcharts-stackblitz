@@ -11,6 +11,7 @@ This repository is intentionally organized by Angular major. It grows one Angula
 | 9.x | `@stackline/angular-highcharts@9.0.0` | `highcharts@10.3.3` | [Open Angular 9](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-9?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 10.x | `@stackline/angular-highcharts@10.0.0` | `highcharts@10.3.3` | [Open Angular 10](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-10?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 11.x | `@stackline/angular-highcharts@11.0.0` | `highcharts@10.3.3` | [Open Angular 11](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-11?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
+| 12.x | `@stackline/angular-highcharts@12.0.0` | `highcharts@12.6.0` | [Open Angular 12](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-12?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 
 ## Angular 9
 
@@ -48,10 +49,20 @@ npm start
 
 The Angular 11 playground keeps the same live/static Highcharts 10.3.3 surface as Angular 10, validated against `@stackline/angular-highcharts@11.0.0`.
 
+## Angular 12
+
+```bash
+cd angular-12
+npm install
+npm start
+```
+
+The Angular 12 playground upgrades the line to `@stackline/angular-highcharts@12.0.0` and `highcharts@12.6.0`, including the modern validated chart surface and AOT-compatible APF package consumption.
+
 ## Links
 
 - Package: https://www.npmjs.com/package/@stackline/angular-highcharts
 - Docs: https://alexandro.net/docs/angular/angular-highcharts/
-- Angular 11 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-11/
-- Angular 11 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-11/live/
+- Angular 12 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-12/
+- Angular 12 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-12/live/
 - Community: https://www.reddit.com/r/Stackline/
