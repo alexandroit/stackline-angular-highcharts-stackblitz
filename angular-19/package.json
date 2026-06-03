@@ -1,0 +1,31 @@
+{
+  "name": "stackline-angular-highcharts-angular-19",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --aot=true --host 0.0.0.0 --port 4429",
+    "build": "ng build --base-href ./ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=true"
+  },
+  "dependencies": {
+    "@angular/common": "^19.2.20",
+    "@angular/compiler": "^19.2.20",
+    "@angular/core": "^19.2.20",
+    "@angular/forms": "^19.2.20",
+    "@angular/platform-browser": "^19.2.20",
+    "@angular/platform-browser-dynamic": "^19.2.20",
+    "@stackline/angular-highcharts": "19.0.0",
+    "highcharts": "12.6.0",
+    "rxjs": "^7.8.2",
+    "zone.js": "~0.15.1",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~19.2.23",
+    "@angular/cli": "19.2.23",
+    "@angular/compiler-cli": "^19.2.20",
+    "@types/minimatch": "3.0.3",
+    "@types/node": "12.12.54",
+    "typescript": "~5.8.3"
+  }
+}
