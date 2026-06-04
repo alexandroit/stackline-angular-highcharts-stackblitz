@@ -5,6 +5,10 @@
       <h1>&#64;stackline/angular-highcharts 22.0.0</h1>
       <p>Project generated with the Angular 22 CLI blueprint and running the validated Angular 22 package line.</p>
     </div>
+    <nav class="route-tabs" aria-label="Example views">
+      <a href="./" [class.active]="viewMode === 'dynamic'">Live dynamic examples</a>
+      <a href="?view=static" [class.active]="viewMode === 'static'">Static examples</a>
+    </nav>
   </header>
 
   <div *ngIf="viewMode === 'dynamic'">

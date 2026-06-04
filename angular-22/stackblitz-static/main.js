@@ -61885,11 +61885,11 @@ var ChartModule = class _ChartModule {
 })();
 
 // src/app/app.ts
-function App_div_9_button_21_Template(rf, ctx) {
+function App_div_14_button_21_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 7);
-    \u0275\u0275listener("click", function App_div_9_button_21_Template_button_click_0_listener() {
+    \u0275\u0275elementStart(0, "button", 10);
+    \u0275\u0275listener("click", function App_div_14_button_21_Template_button_click_0_listener() {
       const symbol_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.selectBinanceSymbol(symbol_r4));
@@ -61905,11 +61905,11 @@ function App_div_9_button_21_Template(rf, ctx) {
     \u0275\u0275textInterpolate(symbol_r4);
   }
 }
-function App_div_9_button_25_Template(rf, ctx) {
+function App_div_14_button_25_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 7);
-    \u0275\u0275listener("click", function App_div_9_button_25_Template_button_click_0_listener() {
+    \u0275\u0275elementStart(0, "button", 10);
+    \u0275\u0275listener("click", function App_div_14_button_25_Template_button_click_0_listener() {
       const interval_r6 = \u0275\u0275restoreView(_r5).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.selectBinanceInterval(interval_r6));
@@ -61925,9 +61925,9 @@ function App_div_9_button_25_Template(rf, ctx) {
     \u0275\u0275textInterpolate(interval_r6);
   }
 }
-function App_div_9_div_28_Template(rf, ctx) {
+function App_div_14_div_28_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19)(1, "span")(2, "em");
+    \u0275\u0275elementStart(0, "div", 22)(1, "span")(2, "em");
     \u0275\u0275text(3, "Open");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "strong");
@@ -61974,10 +61974,10 @@ function App_div_9_div_28_Template(rf, ctx) {
     \u0275\u0275textInterpolate(ctx_r1.formatPercent(ctx_r1.binanceLastCandle.changePercent));
   }
 }
-function App_div_9_article_72_Template(rf, ctx) {
+function App_div_14_article_72_Template(rf, ctx) {
   if (rf & 1) {
     const _r7 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "article", 20)(1, "div", 21)(2, "div")(3, "h3");
+    \u0275\u0275elementStart(0, "article", 23)(1, "div", 24)(2, "div")(3, "h3");
     \u0275\u0275text(4);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "p");
@@ -61986,20 +61986,20 @@ function App_div_9_article_72_Template(rf, ctx) {
     \u0275\u0275elementStart(7, "span");
     \u0275\u0275text(8, "Live");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(9, "div", 22)(10, "chart", 13);
-    \u0275\u0275listener("create", function App_div_9_article_72_Template_chart_create_10_listener($event) {
+    \u0275\u0275elementStart(9, "div", 25)(10, "chart", 16);
+    \u0275\u0275listener("create", function App_div_14_article_72_Template_chart_create_10_listener($event) {
       const example_r8 = \u0275\u0275restoreView(_r7).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.onDynamicChartCreate(example_r8, $event));
     });
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(11, "details", 15)(12, "summary")(13, "span");
+    \u0275\u0275elementStart(11, "details", 18)(12, "summary")(13, "span");
     \u0275\u0275text(14, "Open tutorial");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(15, "small");
     \u0275\u0275text(16, "HTML / TS / SCSS");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(17, "div", 16)(18, "div")(19, "h4");
+    \u0275\u0275elementStart(17, "div", 19)(18, "div")(19, "h4");
     \u0275\u0275text(20, "HTML");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(21, "pre");
@@ -62034,10 +62034,10 @@ function App_div_9_article_72_Template(rf, ctx) {
     \u0275\u0275textInterpolate(example_r8.tutorialScss);
   }
 }
-function App_div_9_Template(rf, ctx) {
+function App_div_14_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div")(1, "section", 4)(2, "div", 5)(3, "div")(4, "h2");
+    \u0275\u0275elementStart(0, "div")(1, "section", 7)(2, "div", 8)(3, "div")(4, "h2");
     \u0275\u0275text(5, "Live crypto candles");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(6, "p");
@@ -62046,19 +62046,19 @@ function App_div_9_Template(rf, ctx) {
     \u0275\u0275elementStart(8, "span");
     \u0275\u0275text(9, "StockChart");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(10, "div", 6)(11, "div")(12, "strong");
+    \u0275\u0275elementStart(10, "div", 9)(11, "div")(12, "strong");
     \u0275\u0275text(13, "Theme");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(14, "button", 7);
-    \u0275\u0275listener("click", function App_div_9_Template_button_click_14_listener() {
+    \u0275\u0275elementStart(14, "button", 10);
+    \u0275\u0275listener("click", function App_div_14_Template_button_click_14_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.selectBinanceTheme("dark"));
     });
     \u0275\u0275text(15, "Dark");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(16, "button", 7);
-    \u0275\u0275listener("click", function App_div_9_Template_button_click_16_listener() {
+    \u0275\u0275elementStart(16, "button", 10);
+    \u0275\u0275listener("click", function App_div_14_Template_button_click_16_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.selectBinanceTheme("light"));
@@ -62068,23 +62068,23 @@ function App_div_9_Template(rf, ctx) {
     \u0275\u0275elementStart(18, "div")(19, "strong");
     \u0275\u0275text(20, "Symbol");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(21, App_div_9_button_21_Template, 2, 3, "button", 8);
+    \u0275\u0275template(21, App_div_14_button_21_Template, 2, 3, "button", 11);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(22, "div")(23, "strong");
     \u0275\u0275text(24, "Interval");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(25, App_div_9_button_25_Template, 2, 3, "button", 8);
+    \u0275\u0275template(25, App_div_14_button_25_Template, 2, 3, "button", 11);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(26, "button", 9);
-    \u0275\u0275listener("click", function App_div_9_Template_button_click_26_listener() {
+    \u0275\u0275elementStart(26, "button", 12);
+    \u0275\u0275listener("click", function App_div_14_Template_button_click_26_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.reloadBinanceChart());
     });
     \u0275\u0275text(27, "Reload");
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(28, App_div_9_div_28_Template, 26, 9, "div", 10);
-    \u0275\u0275elementStart(29, "div", 11)(30, "span");
+    \u0275\u0275template(28, App_div_14_div_28_Template, 26, 9, "div", 13);
+    \u0275\u0275elementStart(29, "div", 14)(30, "span");
     \u0275\u0275text(31);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(32, "span");
@@ -62093,14 +62093,14 @@ function App_div_9_Template(rf, ctx) {
     \u0275\u0275elementStart(34, "span");
     \u0275\u0275text(35);
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(36, "div", 12)(37, "chart", 13);
-    \u0275\u0275listener("create", function App_div_9_Template_chart_create_37_listener($event) {
+    \u0275\u0275elementStart(36, "div", 15)(37, "chart", 16);
+    \u0275\u0275listener("create", function App_div_14_Template_chart_create_37_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onBinanceChartCreate($event));
     });
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(38, "div", 14)(39, "div")(40, "strong");
+    \u0275\u0275elementStart(38, "div", 17)(39, "div")(40, "strong");
     \u0275\u0275text(41, "REST history");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(42, "code");
@@ -62112,13 +62112,13 @@ function App_div_9_Template(rf, ctx) {
     \u0275\u0275elementStart(47, "code");
     \u0275\u0275text(48);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(49, "details", 15)(50, "summary")(51, "span");
+    \u0275\u0275elementStart(49, "details", 18)(50, "summary")(51, "span");
     \u0275\u0275text(52, "Open tutorial");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(53, "small");
     \u0275\u0275text(54, "HTML / TS / SCSS");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(55, "div", 16)(56, "div")(57, "h4");
+    \u0275\u0275elementStart(55, "div", 19)(56, "div")(57, "h4");
     \u0275\u0275text(58, "HTML");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(59, "pre");
@@ -62136,8 +62136,8 @@ function App_div_9_Template(rf, ctx) {
     \u0275\u0275elementStart(69, "pre");
     \u0275\u0275text(70);
     \u0275\u0275elementEnd()()()()();
-    \u0275\u0275elementStart(71, "section", 17);
-    \u0275\u0275template(72, App_div_9_article_72_Template, 33, 7, "article", 18);
+    \u0275\u0275elementStart(71, "section", 20);
+    \u0275\u0275template(72, App_div_14_article_72_Template, 33, 7, "article", 21);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -62176,10 +62176,10 @@ function App_div_9_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r1.dynamicExamples);
   }
 }
-function App_div_10_article_10_Template(rf, ctx) {
+function App_div_15_article_10_Template(rf, ctx) {
   if (rf & 1) {
     const _r10 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "article", 20)(1, "div", 21)(2, "div")(3, "h3");
+    \u0275\u0275elementStart(0, "article", 23)(1, "div", 24)(2, "div")(3, "h3");
     \u0275\u0275text(4);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "p");
@@ -62188,20 +62188,20 @@ function App_div_10_article_10_Template(rf, ctx) {
     \u0275\u0275elementStart(7, "span");
     \u0275\u0275text(8);
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(9, "div", 22)(10, "chart", 13);
-    \u0275\u0275listener("create", function App_div_10_article_10_Template_chart_create_10_listener($event) {
+    \u0275\u0275elementStart(9, "div", 25)(10, "chart", 16);
+    \u0275\u0275listener("create", function App_div_15_article_10_Template_chart_create_10_listener($event) {
       const example_r11 = \u0275\u0275restoreView(_r10).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.onCreate(example_r11.title, $event));
     });
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(11, "details", 15)(12, "summary")(13, "span");
+    \u0275\u0275elementStart(11, "details", 18)(12, "summary")(13, "span");
     \u0275\u0275text(14, "Open tutorial");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(15, "small");
     \u0275\u0275text(16, "HTML / TS / SCSS");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(17, "div", 16)(18, "div")(19, "h4");
+    \u0275\u0275elementStart(17, "div", 19)(18, "div")(19, "h4");
     \u0275\u0275text(20, "HTML");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(21, "pre");
@@ -62238,14 +62238,14 @@ function App_div_10_article_10_Template(rf, ctx) {
     \u0275\u0275textInterpolate(example_r11.tutorialScss);
   }
 }
-function App_div_10_p_82_Template(rf, ctx) {
+function App_div_15_p_82_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "p");
     \u0275\u0275text(1, "Interact with the chart to collect events.");
     \u0275\u0275elementEnd();
   }
 }
-function App_div_10_li_84_Template(rf, ctx) {
+function App_div_15_li_84_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "li");
     \u0275\u0275text(1);
@@ -62257,49 +62257,49 @@ function App_div_10_li_84_Template(rf, ctx) {
     \u0275\u0275textInterpolate(event_r12);
   }
 }
-function App_div_10_Template(rf, ctx) {
+function App_div_15_Template(rf, ctx) {
   if (rf & 1) {
     const _r9 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div")(1, "section", 23)(2, "div")(3, "h2");
+    \u0275\u0275elementStart(0, "div")(1, "section", 26)(2, "div")(3, "h2");
     \u0275\u0275text(4, "Static examples");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "p");
     \u0275\u0275text(6, "Original one-row examples with fixed demo option objects.");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(7, "div", 24);
+    \u0275\u0275elementStart(7, "div", 27);
     \u0275\u0275text(8, "Secondary URL");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(9, "section", 17);
-    \u0275\u0275template(10, App_div_10_article_10_Template, 33, 8, "article", 18);
+    \u0275\u0275elementStart(9, "section", 20);
+    \u0275\u0275template(10, App_div_15_article_10_Template, 33, 8, "article", 21);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(11, "section", 25)(12, "div", 21)(13, "div")(14, "h2");
+    \u0275\u0275elementStart(11, "section", 28)(12, "div", 24)(13, "div")(14, "h2");
     \u0275\u0275text(15, "Dynamic update");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(16, "p");
     \u0275\u0275text(17, "Replaces the options object to validate the Angular 22 input binding.");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(18, "button", 7);
-    \u0275\u0275listener("click", function App_div_10_Template_button_click_18_listener() {
+    \u0275\u0275elementStart(18, "button", 10);
+    \u0275\u0275listener("click", function App_div_15_Template_button_click_18_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.randomizeDynamicChart());
     });
     \u0275\u0275text(19, "Update data");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(20, "div", 26)(21, "chart", 27);
-    \u0275\u0275listener("create", function App_div_10_Template_chart_create_21_listener($event) {
+    \u0275\u0275elementStart(20, "div", 29)(21, "chart", 30);
+    \u0275\u0275listener("create", function App_div_15_Template_chart_create_21_listener($event) {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onCreate("Dynamic update", $event));
     });
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(22, "details", 15)(23, "summary")(24, "span");
+    \u0275\u0275elementStart(22, "details", 18)(23, "summary")(24, "span");
     \u0275\u0275text(25, "Open tutorial");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(26, "small");
     \u0275\u0275text(27, "HTML / TS / SCSS");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(28, "div", 16)(29, "div")(30, "h4");
+    \u0275\u0275elementStart(28, "div", 19)(29, "div")(30, "h4");
     \u0275\u0275text(31, "HTML");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(32, "pre");
@@ -62317,68 +62317,68 @@ function App_div_10_Template(rf, ctx) {
     \u0275\u0275elementStart(42, "pre");
     \u0275\u0275text(43);
     \u0275\u0275elementEnd()()()()();
-    \u0275\u0275elementStart(44, "section", 25)(45, "div", 21)(46, "div")(47, "h2");
+    \u0275\u0275elementStart(44, "section", 28)(45, "div", 24)(46, "div")(47, "h2");
     \u0275\u0275text(48, "Directive and event outputs");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(49, "p");
     \u0275\u0275text(50, "Projected wrapper directives wire chart, series, point and axis events.");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(51, "div", 26)(52, "chart", 28);
-    \u0275\u0275listener("create", function App_div_10_Template_chart_create_52_listener($event) {
+    \u0275\u0275elementStart(51, "div", 29)(52, "chart", 31);
+    \u0275\u0275listener("create", function App_div_15_Template_chart_create_52_listener($event) {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onCreate("Directive chart", $event));
-    })("load", function App_div_10_Template_chart_load_52_listener() {
+    })("load", function App_div_15_Template_chart_load_52_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("chart load"));
-    })("redraw", function App_div_10_Template_chart_redraw_52_listener() {
+    })("redraw", function App_div_15_Template_chart_redraw_52_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("chart redraw"));
     });
-    \u0275\u0275elementStart(53, "series", 29);
-    \u0275\u0275listener("click", function App_div_10_Template_series_click_53_listener() {
+    \u0275\u0275elementStart(53, "series", 32);
+    \u0275\u0275listener("click", function App_div_15_Template_series_click_53_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("series click"));
-    })("legendItemClick", function App_div_10_Template_series_legendItemClick_53_listener() {
+    })("legendItemClick", function App_div_15_Template_series_legendItemClick_53_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("legend click"));
     });
-    \u0275\u0275elementStart(54, "point", 30);
-    \u0275\u0275listener("click", function App_div_10_Template_point_click_54_listener() {
+    \u0275\u0275elementStart(54, "point", 33);
+    \u0275\u0275listener("click", function App_div_15_Template_point_click_54_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("point click"));
-    })("mouseOver", function App_div_10_Template_point_mouseOver_54_listener() {
+    })("mouseOver", function App_div_15_Template_point_mouseOver_54_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("point hover"));
     });
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(55, "xAxis", 31);
-    \u0275\u0275listener("setExtremes", function App_div_10_Template_xAxis_setExtremes_55_listener() {
+    \u0275\u0275elementStart(55, "xAxis", 34);
+    \u0275\u0275listener("setExtremes", function App_div_15_Template_xAxis_setExtremes_55_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("xAxis extremes"));
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(56, "yAxis", 31);
-    \u0275\u0275listener("setExtremes", function App_div_10_Template_yAxis_setExtremes_56_listener() {
+    \u0275\u0275elementStart(56, "yAxis", 34);
+    \u0275\u0275listener("setExtremes", function App_div_15_Template_yAxis_setExtremes_56_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.record("yAxis extremes"));
     });
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(57, "details", 15)(58, "summary")(59, "span");
+    \u0275\u0275elementStart(57, "details", 18)(58, "summary")(59, "span");
     \u0275\u0275text(60, "Open tutorial");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(61, "small");
     \u0275\u0275text(62, "HTML / TS / SCSS");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(63, "div", 16)(64, "div")(65, "h4");
+    \u0275\u0275elementStart(63, "div", 19)(64, "div")(65, "h4");
     \u0275\u0275text(66, "HTML");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(67, "pre");
@@ -62396,12 +62396,12 @@ function App_div_10_Template(rf, ctx) {
     \u0275\u0275elementStart(77, "pre");
     \u0275\u0275text(78);
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(79, "div", 32)(80, "strong");
+    \u0275\u0275elementStart(79, "div", 35)(80, "strong");
     \u0275\u0275text(81, "Event log");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(82, App_div_10_p_82_Template, 2, 0, "p", 1);
+    \u0275\u0275template(82, App_div_15_p_82_Template, 2, 0, "p", 4);
     \u0275\u0275elementStart(83, "ul");
-    \u0275\u0275template(84, App_div_10_li_84_Template, 2, 1, "li", 33);
+    \u0275\u0275template(84, App_div_15_li_84_Template, 2, 1, "li", 36);
     \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
@@ -66089,7 +66089,7 @@ chart {
   static \u0275fac = function App_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _App)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], standalone: false, decls: 47, vars: 2, consts: [[1, "header-copy"], [4, "ngIf"], [1, "panel", "capabilities-footer"], [1, "capability-grid"], [1, "chart-card", "live-market-card"], [1, "chart-head", "market-head"], [1, "market-toolbar"], ["type", "button", 3, "click"], ["type", "button", 3, "active", "click", 4, "ngFor", "ngForOf"], ["type", "button", 1, "reload-button", 3, "click"], ["class", "market-ticker", 4, "ngIf"], [1, "market-status"], [1, "chart-frame", "market-frame"], [3, "create", "type", "options"], [1, "endpoint-grid"], [1, "tutorial-collapse"], [1, "code-layer-grid"], [1, "examples-grid"], ["class", "chart-card", 4, "ngFor", "ngForOf"], [1, "market-ticker"], [1, "chart-card"], [1, "chart-head"], [1, "chart-frame"], [1, "panel", "intro-panel"], [1, "status-pill"], [1, "panel", "feature-panel"], [1, "chart-frame", "large"], [3, "create", "options"], [3, "create", "load", "redraw", "options"], [3, "click", "legendItemClick"], [3, "click", "mouseOver"], [3, "setExtremes"], [1, "event-log"], [4, "ngFor", "ngForOf"]], template: function App_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], standalone: false, decls: 52, vars: 6, consts: [[1, "header-copy"], ["aria-label", "Example views", 1, "route-tabs"], ["href", "./"], ["href", "?view=static"], [4, "ngIf"], [1, "panel", "capabilities-footer"], [1, "capability-grid"], [1, "chart-card", "live-market-card"], [1, "chart-head", "market-head"], [1, "market-toolbar"], ["type", "button", 3, "click"], ["type", "button", 3, "active", "click", 4, "ngFor", "ngForOf"], ["type", "button", 1, "reload-button", 3, "click"], ["class", "market-ticker", 4, "ngIf"], [1, "market-status"], [1, "chart-frame", "market-frame"], [3, "create", "type", "options"], [1, "endpoint-grid"], [1, "tutorial-collapse"], [1, "code-layer-grid"], [1, "examples-grid"], ["class", "chart-card", 4, "ngFor", "ngForOf"], [1, "market-ticker"], [1, "chart-card"], [1, "chart-head"], [1, "chart-frame"], [1, "panel", "intro-panel"], [1, "status-pill"], [1, "panel", "feature-panel"], [1, "chart-frame", "large"], [3, "create", "options"], [3, "create", "load", "redraw", "options"], [3, "click", "legendItemClick"], [3, "click", "mouseOver"], [3, "setExtremes"], [1, "event-log"], [4, "ngFor", "ngForOf"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "main")(1, "header")(2, "div", 0)(3, "span");
       \u0275\u0275text(4, "Angular CLI 22.0.0 / Angular 22.0.0 runtime");
@@ -66099,50 +66099,60 @@ chart {
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(7, "p");
       \u0275\u0275text(8, "Project generated with the Angular 22 CLI blueprint and running the validated Angular 22 package line.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(9, "nav", 1)(10, "a", 2);
+      \u0275\u0275text(11, "Live dynamic examples");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(12, "a", 3);
+      \u0275\u0275text(13, "Static examples");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275template(9, App_div_9_Template, 73, 22, "div", 1)(10, App_div_10_Template, 85, 11, "div", 1);
-      \u0275\u0275elementStart(11, "footer", 2)(12, "h2");
-      \u0275\u0275text(13, "Wrapper capabilities");
+      \u0275\u0275template(14, App_div_14_Template, 73, 22, "div", 4)(15, App_div_15_Template, 85, 11, "div", 4);
+      \u0275\u0275elementStart(16, "footer", 5)(17, "h2");
+      \u0275\u0275text(18, "Wrapper capabilities");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(14, "div", 3)(15, "div")(16, "strong");
-      \u0275\u0275text(17, "Options API");
+      \u0275\u0275elementStart(19, "div", 6)(20, "div")(21, "strong");
+      \u0275\u0275text(22, "Options API");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(18, "span")(19, "code");
-      \u0275\u0275text(20, '<chart [options]="options">');
+      \u0275\u0275elementStart(23, "span")(24, "code");
+      \u0275\u0275text(25, '<chart [options]="options">');
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(21, "div")(22, "strong");
-      \u0275\u0275text(23, "Constructor switch");
+      \u0275\u0275elementStart(26, "div")(27, "strong");
+      \u0275\u0275text(28, "Constructor switch");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(24, "span")(25, "code");
-      \u0275\u0275text(26, `[type]="'StockChart'"`);
+      \u0275\u0275elementStart(29, "span")(30, "code");
+      \u0275\u0275text(31, `[type]="'StockChart'"`);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(27, "div")(28, "strong");
-      \u0275\u0275text(29, "Directive events");
+      \u0275\u0275elementStart(32, "div")(33, "strong");
+      \u0275\u0275text(34, "Directive events");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(30, "span")(31, "code");
-      \u0275\u0275text(32, "<series>");
+      \u0275\u0275elementStart(35, "span")(36, "code");
+      \u0275\u0275text(37, "<series>");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(33, ", ");
-      \u0275\u0275elementStart(34, "code");
-      \u0275\u0275text(35, "<point>");
+      \u0275\u0275text(38, ", ");
+      \u0275\u0275elementStart(39, "code");
+      \u0275\u0275text(40, "<point>");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(36, ", ");
-      \u0275\u0275elementStart(37, "code");
-      \u0275\u0275text(38, "<xAxis>");
+      \u0275\u0275text(41, ", ");
+      \u0275\u0275elementStart(42, "code");
+      \u0275\u0275text(43, "<xAxis>");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(39, ", ");
-      \u0275\u0275elementStart(40, "code");
-      \u0275\u0275text(41, "<yAxis>");
+      \u0275\u0275text(44, ", ");
+      \u0275\u0275elementStart(45, "code");
+      \u0275\u0275text(46, "<yAxis>");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(42, "div")(43, "strong");
-      \u0275\u0275text(44, "Highcharts modules");
+      \u0275\u0275elementStart(47, "div")(48, "strong");
+      \u0275\u0275text(49, "Highcharts modules");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(45, "span");
-      \u0275\u0275text(46, "more, 3d, heatmap, treemap, funnel, solid-gauge, stock, map, drilldown, sankey, networkgraph, sunburst, wordcloud, xrange, timeline, variwide, item, streamgraph, bullet, dumbbell, lollipop, pareto, tilemap, venn, organization");
+      \u0275\u0275elementStart(50, "span");
+      \u0275\u0275text(51, "more, 3d, heatmap, treemap, funnel, solid-gauge, stock, map, drilldown, sankey, networkgraph, sunburst, wordcloud, xrange, timeline, variwide, item, streamgraph, bullet, dumbbell, lollipop, pareto, tilemap, venn, organization");
       \u0275\u0275elementEnd()()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(9);
+      \u0275\u0275advance(10);
+      \u0275\u0275classProp("active", ctx.viewMode === "dynamic");
+      \u0275\u0275advance(2);
+      \u0275\u0275classProp("active", ctx.viewMode === "static");
+      \u0275\u0275advance(2);
       \u0275\u0275property("ngIf", ctx.viewMode === "dynamic");
       \u0275\u0275advance();
       \u0275\u0275property("ngIf", ctx.viewMode === "static");
@@ -66159,6 +66169,10 @@ chart {
       <h1>&#64;stackline/angular-highcharts 22.0.0</h1>
       <p>Project generated with the Angular 22 CLI blueprint and running the validated Angular 22 package line.</p>
     </div>
+    <nav class="route-tabs" aria-label="Example views">
+      <a href="./" [class.active]="viewMode === 'dynamic'">Live dynamic examples</a>
+      <a href="?view=static" [class.active]="viewMode === 'static'">Static examples</a>
+    </nav>
   </header>
 
   <div *ngIf="viewMode === 'dynamic'">
