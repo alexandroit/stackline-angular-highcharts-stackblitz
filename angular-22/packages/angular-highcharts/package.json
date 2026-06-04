@@ -56,7 +56,7 @@
   },
   "homepage": "https://alexandro.net/docs/angular/angular-highcharts/",
   "peerDependencies": {
-    "@angular/core": ">=22.0.0 <23.0.0",
+    "@angular/core": ">=22.0.0 <24.0.0",
     "highcharts": ">=5.0.0 <=12.6.0"
   },
   "dependencies": {
