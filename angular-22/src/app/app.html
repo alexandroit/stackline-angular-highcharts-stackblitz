@@ -1,0 +1,282 @@
+<main>
+  <header>
+    <div class="header-copy">
+      <span>Angular CLI 22.0.0 / Angular 22.0.0 runtime</span>
+      <h1>&#64;stackline/angular-highcharts 22.0.0</h1>
+      <p>Project generated with the Angular 22 CLI blueprint and running the validated Angular 22 package line.</p>
+    </div>
+  </header>
+
+  <div *ngIf="viewMode === 'dynamic'">
+    <section
+      class="chart-card live-market-card"
+      [class.market-light]="binanceTheme === 'light'"
+      [class.market-dark]="binanceTheme === 'dark'"
+    >
+      <div class="chart-head market-head">
+        <div>
+          <h2>Live crypto candles</h2>
+          <p>REST candle history from Binance through the Mask API with realtime WebSocket candle updates.</p>
+        </div>
+        <span>StockChart</span>
+      </div>
+
+      <div class="market-toolbar">
+        <div>
+          <strong>Theme</strong>
+          <button type="button" [class.active]="binanceTheme === 'dark'" (click)="selectBinanceTheme('dark')">Dark</button>
+          <button type="button" [class.active]="binanceTheme === 'light'" (click)="selectBinanceTheme('light')">Light</button>
+        </div>
+        <div>
+          <strong>Symbol</strong>
+          <button type="button" *ngFor="let symbol of binanceSymbols" [class.active]="symbol === binanceSymbol" (click)="selectBinanceSymbol(symbol)">{{ symbol }}</button>
+        </div>
+        <div>
+          <strong>Interval</strong>
+          <button type="button" *ngFor="let interval of binanceIntervals" [class.active]="interval === binanceInterval" (click)="selectBinanceInterval(interval)">{{ interval }}</button>
+        </div>
+        <button type="button" class="reload-button" (click)="reloadBinanceChart()">Reload</button>
+      </div>
+
+      <div class="market-ticker" *ngIf="binanceLastCandle">
+        <span><em>Open</em> <strong>{{ formatPrice(binanceLastCandle.open) }}</strong></span>
+        <span><em>High</em> <strong>{{ formatPrice(binanceLastCandle.high) }}</strong></span>
+        <span><em>Low</em> <strong>{{ formatPrice(binanceLastCandle.low) }}</strong></span>
+        <span><em>Close</em> <strong>{{ formatPrice(binanceLastCandle.close) }}</strong></span>
+        <span [class.positive]="binanceLastCandle.changePercent >= 0" [class.negative]="binanceLastCandle.changePercent < 0"><em>Change</em> <strong>{{ formatPercent(binanceLastCandle.changePercent) }}</strong></span>
+      </div>
+
+      <div class="market-status">
+        <span>{{ binanceStatus }}</span>
+        <span>{{ binanceSocketStatus }}</span>
+        <span>{{ binanceCandleCount }} candles</span>
+      </div>
+
+      <div class="chart-frame market-frame">
+        <chart [type]="'StockChart'" [options]="binanceOptions" (create)="onBinanceChartCreate($event)"></chart>
+      </div>
+
+      <div class="endpoint-grid">
+        <div>
+          <strong>REST history</strong>
+          <code>{{ binanceRestUrl || 'Waiting for REST endpoint...' }}</code>
+        </div>
+        <div>
+          <strong>Realtime WebSocket</strong>
+          <code>{{ binanceWsUrl || 'Waiting for WebSocket endpoint...' }}</code>
+        </div>
+      </div>
+
+      <details class="tutorial-collapse">
+        <summary>
+          <span>Open tutorial</span>
+          <small>HTML / TS / SCSS</small>
+        </summary>
+        <div class="code-layer-grid">
+          <div>
+            <h4>HTML</h4>
+            <pre>{{ binanceTutorialHtml }}</pre>
+          </div>
+          <div>
+            <h4>TS</h4>
+            <pre>{{ binanceTutorialTs }}</pre>
+          </div>
+          <div>
+            <h4>SCSS</h4>
+            <pre>{{ binanceTutorialScss }}</pre>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="examples-grid">
+      <article class="chart-card" *ngFor="let example of dynamicExamples">
+        <div class="chart-head">
+          <div>
+            <h3>{{ example.title }}</h3>
+            <p>{{ example.description }}</p>
+          </div>
+          <span>Live</span>
+        </div>
+
+        <div class="chart-frame">
+          <chart [type]="example.constructorType || 'Chart'" [options]="example.options" (create)="onDynamicChartCreate(example, $event)"></chart>
+        </div>
+
+        <details class="tutorial-collapse">
+          <summary>
+            <span>Open tutorial</span>
+            <small>HTML / TS / SCSS</small>
+          </summary>
+          <div class="code-layer-grid">
+            <div>
+              <h4>HTML</h4>
+              <pre>{{ example.tutorialHtml }}</pre>
+            </div>
+            <div>
+              <h4>TS</h4>
+              <pre>{{ example.tutorialTs }}</pre>
+            </div>
+            <div>
+              <h4>SCSS</h4>
+              <pre>{{ example.tutorialScss }}</pre>
+            </div>
+          </div>
+        </details>
+      </article>
+    </section>
+
+  </div>
+
+  <div *ngIf="viewMode === 'static'">
+    <section class="panel intro-panel">
+      <div>
+        <h2>Static examples</h2>
+        <p>Original one-row examples with fixed demo option objects.</p>
+      </div>
+      <div class="status-pill">Secondary URL</div>
+    </section>
+
+    <section class="examples-grid">
+      <article class="chart-card" *ngFor="let example of examples">
+        <div class="chart-head">
+          <div>
+            <h3>{{ example.title }}</h3>
+            <p>{{ example.description }}</p>
+          </div>
+          <span>{{ example.constructorType || 'Chart' }}</span>
+        </div>
+
+        <div class="chart-frame">
+          <chart [type]="example.constructorType || 'Chart'" [options]="example.options" (create)="onCreate(example.title, $event)"></chart>
+        </div>
+
+        <details class="tutorial-collapse">
+          <summary>
+            <span>Open tutorial</span>
+            <small>HTML / TS / SCSS</small>
+          </summary>
+          <div class="code-layer-grid">
+            <div>
+              <h4>HTML</h4>
+              <pre>{{ example.tutorialHtml }}</pre>
+            </div>
+            <div>
+              <h4>TS</h4>
+              <pre>{{ example.tutorialTs }}</pre>
+            </div>
+            <div>
+              <h4>SCSS</h4>
+              <pre>{{ example.tutorialScss }}</pre>
+            </div>
+          </div>
+        </details>
+      </article>
+    </section>
+
+    <section class="panel feature-panel">
+      <div class="chart-head">
+        <div>
+          <h2>Dynamic update</h2>
+          <p>Replaces the options object to validate the Angular 22 input binding.</p>
+        </div>
+        <button type="button" (click)="randomizeDynamicChart()">Update data</button>
+      </div>
+
+      <div class="chart-frame large">
+        <chart [options]="dynamicOptions" (create)="onCreate('Dynamic update', $event)"></chart>
+      </div>
+
+      <details class="tutorial-collapse">
+        <summary>
+          <span>Open tutorial</span>
+          <small>HTML / TS / SCSS</small>
+        </summary>
+        <div class="code-layer-grid">
+          <div>
+            <h4>HTML</h4>
+            <pre>{{ dynamicTutorialHtml }}</pre>
+          </div>
+          <div>
+            <h4>TS</h4>
+            <pre>{{ dynamicTutorialTs }}</pre>
+          </div>
+          <div>
+            <h4>SCSS</h4>
+            <pre>{{ dynamicTutorialScss }}</pre>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel feature-panel">
+      <div class="chart-head">
+        <div>
+          <h2>Directive and event outputs</h2>
+          <p>Projected wrapper directives wire chart, series, point and axis events.</p>
+        </div>
+      </div>
+
+      <div class="chart-frame large">
+        <chart [options]="directiveOptions" (create)="onCreate('Directive chart', $event)" (load)="record('chart load')" (redraw)="record('chart redraw')">
+          <series (click)="record('series click')" (legendItemClick)="record('legend click')">
+            <point (click)="record('point click')" (mouseOver)="record('point hover')"></point>
+          </series>
+          <xAxis (setExtremes)="record('xAxis extremes')"></xAxis>
+          <yAxis (setExtremes)="record('yAxis extremes')"></yAxis>
+        </chart>
+      </div>
+
+      <details class="tutorial-collapse">
+        <summary>
+          <span>Open tutorial</span>
+          <small>HTML / TS / SCSS</small>
+        </summary>
+        <div class="code-layer-grid">
+          <div>
+            <h4>HTML</h4>
+            <pre>{{ directiveTutorialHtml }}</pre>
+          </div>
+          <div>
+            <h4>TS</h4>
+            <pre>{{ directiveTutorialTs }}</pre>
+          </div>
+          <div>
+            <h4>SCSS</h4>
+            <pre>{{ directiveTutorialScss }}</pre>
+          </div>
+        </div>
+      </details>
+
+      <div class="event-log">
+        <strong>Event log</strong>
+        <p *ngIf="!events.length">Interact with the chart to collect events.</p>
+        <ul>
+          <li *ngFor="let event of events">{{ event }}</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <footer class="panel capabilities-footer">
+    <h2>Wrapper capabilities</h2>
+    <div class="capability-grid">
+      <div>
+        <strong>Options API</strong>
+        <span><code>&lt;chart [options]="options"&gt;</code></span>
+      </div>
+      <div>
+        <strong>Constructor switch</strong>
+        <span><code>[type]="'StockChart'"</code></span>
+      </div>
+      <div>
+        <strong>Directive events</strong>
+        <span><code>&lt;series&gt;</code>, <code>&lt;point&gt;</code>, <code>&lt;xAxis&gt;</code>, <code>&lt;yAxis&gt;</code></span>
+      </div>
+      <div>
+        <strong>Highcharts modules</strong>
+        <span>more, 3d, heatmap, treemap, funnel, solid-gauge, stock, map, drilldown, sankey, networkgraph, sunburst, wordcloud, xrange, timeline, variwide, item, streamgraph, bullet, dumbbell, lollipop, pareto, tilemap, venn, organization</span>
+      </div>
+    </div>
+  </footer>
+</main>
