@@ -13,21 +13,21 @@
   "private": true,
   "packageManager": "npm@10.9.8",
   "dependencies": {
-    "@angular/common": "22.0.0",
-    "@angular/compiler": "22.0.0",
-    "@angular/core": "22.0.0",
-    "@angular/forms": "22.0.0",
-    "@angular/platform-browser": "22.0.0",
-    "@angular/router": "22.0.0",
+    "@angular/common": "22.0.2",
+    "@angular/compiler": "22.0.2",
+    "@angular/core": "22.0.2",
+    "@angular/forms": "22.0.2",
+    "@angular/platform-browser": "22.0.2",
+    "@angular/router": "22.0.2",
     "@stackline/angular-highcharts": "file:packages/angular-highcharts",
     "highcharts": "12.6.0",
     "rxjs": "7.8.2",
     "tslib": "2.8.1"
   },
   "devDependencies": {
-    "@angular/build": "22.0.0",
-    "@angular/cli": "22.0.0",
-    "@angular/compiler-cli": "22.0.0",
+    "@angular/build": "22.0.3",
+    "@angular/cli": "22.0.3",
+    "@angular/compiler-cli": "22.0.2",
     "prettier": "^3.8.1",
     "typescript": "6.0.3"
   }

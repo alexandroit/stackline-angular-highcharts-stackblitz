@@ -1,6 +1,6 @@
 # @stackline/angular-highcharts Angular 22 StackBlitz
 
-Angular 22 playground for `@stackline/angular-highcharts@22.0.0` and `highcharts@12.6.0`.
+Angular 22 playground for `@stackline/angular-highcharts@22.0.1` and `highcharts@12.6.0`.
 
 The app is a real Angular CLI 22 project. It uses the same live Highcharts demo surface as the Angular 22 docs: live crypto candles, dynamic chart cards, static chart examples, tutorial panels, constructor switching, native chart instance access, and projected directive events.
 
