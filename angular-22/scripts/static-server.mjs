@@ -88,6 +88,12 @@ async function sendFile(request, response, filePath) {
   createReadStream(filePath).pipe(response);
 }
 
+export function sendInternalServerError(response, error) {
+  console.error('[stackline] Static preview request failed:', error);
+  response.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+  response.end('Internal server error');
+}
+
 export function serveStatic(options = {}) {
   const host = options.host || process.env.HOST || '0.0.0.0';
   const port = Number(options.port || process.env.PORT || 4200);
@@ -105,8 +111,7 @@ export function serveStatic(options = {}) {
 
       await sendFile(request, response, filePath);
     } catch (error) {
-      response.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
-      response.end(error instanceof Error ? error.message : String(error));
+      sendInternalServerError(response, error);
     }
   });
 

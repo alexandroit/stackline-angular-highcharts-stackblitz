@@ -6,6 +6,7 @@
     "start": "node scripts/start.mjs",
     "dev": "ng serve --host 0.0.0.0 --port 4432",
     "serve:static": "node scripts/static-server.mjs",
+    "test:server": "node --test scripts/static-server.test.mjs",
     "build": "ng build --configuration development --base-href ./",
     "build:static": "ng build --configuration production --base-href ./ --output-hashing=none",
     "watch": "ng build --watch --configuration development",

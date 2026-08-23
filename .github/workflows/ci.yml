@@ -46,5 +46,6 @@ jobs:
           cache: npm
           cache-dependency-path: angular-22/package-lock.json
       - run: npm ci
+      - run: npm run test:server
       - run: npm run build
       - run: npm audit --audit-level=low
