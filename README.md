@@ -178,3 +178,9 @@ The Angular 22 playground uses `@stackline/angular-highcharts@22.0.0`, Angular 2
 - Angular 22 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-22/
 - Angular 22 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-22/live/
 - Community: https://www.reddit.com/r/Stackline/
+
+## License
+
+The playground source and Angular wrapper examples are available under the
+[MIT License](LICENSE), including the original wrapper attribution. Highcharts
+is licensed separately by Highsoft AS; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
