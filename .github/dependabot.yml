@@ -10,9 +10,26 @@ updates:
     versioning-strategy: increase-if-necessary
     commit-message:
       prefix: deps
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
     groups:
       current-compatible:
-        dependency-type: development
         update-types:
           - minor
           - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+      time: "10:30"
+      timezone: America/Toronto
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: ci
+    groups:
+      github-actions:
+        patterns:
+          - "*"
