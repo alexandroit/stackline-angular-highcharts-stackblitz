@@ -2,6 +2,7 @@ import * as i0 from '@angular/core';
 import { EventEmitter, AfterViewInit, OnChanges, OnDestroy, ElementRef, ModuleWithProviders } from '@angular/core';
 
 declare class HighchartsStatic {
+    [constructorName: string]: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<HighchartsStatic, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<HighchartsStatic>;
 }

@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /angular-22
+    schedule:
+      interval: monthly
+      time: "10:00"
+      timezone: America/Toronto
+    open-pull-requests-limit: 5
+    versioning-strategy: increase-if-necessary
+    commit-message:
+      prefix: deps
+    groups:
+      current-compatible:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch

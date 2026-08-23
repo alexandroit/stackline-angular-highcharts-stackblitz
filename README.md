@@ -4,6 +4,10 @@ Dedicated StackBlitz playgrounds for `@stackline/angular-highcharts`.
 
 This repository is intentionally organized by Angular major. It grows one Angular line at a time as each release is validated and published.
 
+Angular 22 is the maintained default playground. Angular 9–21 remain available
+as exact framework compatibility examples and must not be treated as supported
+production templates.
+
 ## Available Playgrounds
 
 | Angular | Package | Highcharts | StackBlitz |
@@ -21,7 +25,7 @@ This repository is intentionally organized by Angular major. It grows one Angula
 | 19.x | `@stackline/angular-highcharts@19.0.0` | `highcharts@12.6.0` | [Open Angular 19](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-19?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 20.x | `@stackline/angular-highcharts@20.0.0` | `highcharts@12.6.0` | [Open Angular 20](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-20?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
 | 21.x | `@stackline/angular-highcharts@21.0.0` | `highcharts@12.6.0` | [Open Angular 21](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-21?file=src%2Fapp%2Fapp.component.ts&startScript=start) |
-| 22.x | `@stackline/angular-highcharts@22.0.0` | `highcharts@12.6.0` | [Open Angular 22](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-22?file=src%2Fapp%2Fapp.ts&startScript=start) |
+| 22.x | `@stackline/angular-highcharts@22.1.1` | `highcharts@12.6.0` | [Open Angular 22](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-22?file=src%2Fapp%2Fapp.ts&startScript=start) |
 
 ## Angular 9
 
@@ -163,11 +167,14 @@ The Angular 21 playground uses `@stackline/angular-highcharts@21.0.0`, Angular 2
 
 ```bash
 cd angular-22
-npm install
+npm ci
 npm start
 ```
 
-The Angular 22 playground uses `@stackline/angular-highcharts@22.0.0`, Angular 22.0.0, Angular CLI 22.0.0, and `highcharts@12.6.0`. The package is included as a local `file:packages/angular-highcharts` dependency so the StackBlitz project can open before the Angular 22 package line is promoted to public npm.
+The Angular 22 playground uses `@stackline/angular-highcharts@22.1.1`,
+Angular 22.1.3, Angular CLI 22.1.5, and `highcharts@12.6.0`. The
+package is included as a local `file:packages/angular-highcharts` dependency
+so the StackBlitz project is self-contained.
 
 `npm start` is StackBlitz-safe for Angular 22. When WebContainer provides a Node version supported by Angular 22, it starts the real Angular CLI dev server. When WebContainer is still on an older Node runtime, it serves the committed `stackblitz-static/` build instead of failing during boot.
 
@@ -178,6 +185,13 @@ The Angular 22 playground uses `@stackline/angular-highcharts@22.0.0`, Angular 2
 - Angular 22 docs: https://alexandro.net/docs/angular/angular-highcharts/angular-22/
 - Angular 22 live docs: https://alexandro.net/docs/angular/angular-highcharts/angular-22/live/
 - Community: https://www.reddit.com/r/Stackline/
+
+## Security
+
+Only Angular 22 receives proactive dependency maintenance. The historical
+playgrounds intentionally preserve end-of-life Angular majors and should run
+only in disposable local or StackBlitz environments. See
+[SECURITY.md](SECURITY.md) for the support and alert-classification policy.
 
 ## License
 

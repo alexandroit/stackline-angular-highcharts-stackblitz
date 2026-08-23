@@ -6,7 +6,7 @@
 [![npm monthly](https://img.shields.io/npm/dm/@stackline/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-highcharts)
 [![license](https://img.shields.io/npm/l/@stackline/angular-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular-highcharts/blob/master/LICENSE)
 [![Angular 22](https://img.shields.io/badge/Angular-22.x-red?style=flat-square&logo=angular)](https://alexandro.net/docs/angular/angular-highcharts/angular-22/)
-[![Highcharts](https://img.shields.io/badge/Highcharts-5%2B-2f7ed8?style=flat-square)](https://www.highcharts.com/)
+[![Highcharts](https://img.shields.io/badge/Highcharts-5--13-2f7ed8?style=flat-square)](https://www.highcharts.com/)
 [![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
 **[Documentation & Live Demos](https://alexandro.net/docs/angular/angular-highcharts/)** | **[Angular 22 Demo](https://alexandro.net/docs/angular/angular-highcharts/angular-22/)** | **[StackBlitz](https://stackblitz.com/github/alexandroit/stackline-angular-highcharts-stackblitz/tree/master/angular-22?file=src%2Fapp%2Fapp.ts&startScript=start)** | **[npm](https://www.npmjs.com/package/@stackline/angular-highcharts)** | **[Issues](https://github.com/alexandroit/angular-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular-highcharts)** | **[Community Discussions](https://www.reddit.com/r/Stackline/)**
@@ -15,7 +15,7 @@
   <img src="https://assets.alexandro.net/2026/06/angular2-highcharts.gif" alt="Stackline Angular Highcharts live examples" width="920">
 </p>
 
-**Angular 22 release:** `22.0.1`
+**Angular 22 release:** `22.1.1`
 
 ---
 
@@ -29,7 +29,7 @@
 
 The goal is not to hide Highcharts. The package stays thin: your application still owns the real Highcharts options object, the Highcharts constructor choice, module registration, event handling, and native chart instance. The wrapper gives Angular templates a stable `<chart>` component, Angular event outputs, axis/series/point directives, and release families aligned to Angular majors.
 
-The Angular 22 package family is `22.0.1` and is intended for Angular `22.x` applications. The live validation app for this line uses a real Angular 22 project, renders static chart examples, renders realtime market examples, and validates that dynamic charts update existing Highcharts instances instead of blinking through full object recreation.
+The Angular 22 package family is `22.1.1` and is intended for Angular `22.x` applications. The live validation app uses Angular 22.1.3 and Highcharts 13.0.1, renders static and realtime examples, and validates that dynamic charts update existing Highcharts instances instead of blinking through full object recreation.
 
 ## Features
 
@@ -76,7 +76,7 @@ Each package family targets one Angular major. Keep the package major aligned wi
 
 | Package family | Angular family | Peer range | Install |
 | :---: | :---: | :---: | :--- |
-| `22.x` | Angular `22.x` | `>=22.0.0 <24.0.0` | `npm install @stackline/angular-highcharts@22.0.1 highcharts@12.6.0 --save-exact` |
+| `22.x` | Angular `22.x` | `>=22.0.0 <24.0.0` | `npm install @stackline/angular-highcharts@22.1.1 highcharts@13.0.1 --save-exact` |
 | `21.x` | Angular `21.x` | `>=21.0.0 <22.0.0` | `npm install @stackline/angular-highcharts@21.0.0 highcharts@12.6.0 --save-exact` |
 | `20.x` | Angular `20.x` | `>=20.0.0 <21.0.0` | `npm install @stackline/angular-highcharts@20.0.0 highcharts@12.6.0 --save-exact` |
 | `19.x` | Angular `19.x` | `>=19.0.0 <20.0.0` | `npm install @stackline/angular-highcharts@19.0.0 highcharts@12.6.0 --save-exact` |
@@ -102,16 +102,23 @@ Angular 3 does not have a package family because Angular skipped version 3.
 ## Installation
 
 ```bash
-npm install @stackline/angular-highcharts@22.0.1 highcharts@12.6.0 --save-exact
+npm install @stackline/angular-highcharts highcharts
 ```
 
 The package declares `highcharts` as a peer dependency so your application can choose the Highcharts version and modules it needs.
 
 ## Highcharts Compatibility
 
-The Angular 22 validation app uses `highcharts@12.6.0`, which is the highest Highcharts version tested for this line.
+The Angular 22 validation app uses `highcharts@13.0.1`, which is the highest Highcharts version tested for this line.
 
-The maintained Stackline Angular 22 line declares a Highcharts peer range of `>=5.0.0 <=12.6.0` so applications get a clear, reproducible compatibility ceiling while still keeping Highcharts as an application-owned peer dependency.
+The maintained Stackline Angular 22 line declares a Highcharts peer range of `>=5.0.0 <=13.0.1` so applications get a clear, reproducible compatibility ceiling while still keeping Highcharts as an application-owned peer dependency.
+
+Highcharts 13 does not change the wrapper API, but it includes upstream behavior changes that can affect application-owned chart options:
+
+- `dataSorting` now requires the `highcharts/modules/data-sorting` module.
+- Gauge and polar defaults changed, and some data-label positions can shift.
+- Numeric solid-gauge radii are pixels; use strings such as `'50%'` for percentages.
+- `useHTML` content is wrapped in a `div`, so selectors targeting the old `span` wrapper may need adjustment.
 
 
 ## Setup
@@ -122,13 +129,12 @@ The maintained Stackline Angular 22 line declares a Highcharts peer range of `>=
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ChartModule } from '@stackline/angular-highcharts';
-
-declare var require: any;
+import Highcharts from 'highcharts/esm/highcharts.js';
 
 @NgModule({
   imports: [
     BrowserModule,
-    ChartModule.forRoot(require('highcharts'))
+    ChartModule.forRoot(Highcharts)
   ]
 })
 export class AppModule {}
@@ -188,26 +194,24 @@ Common constructor values:
 
 ## Highcharts Modules
 
-Register Highcharts modules through `ChartModule.forRoot(...)`. The wrapper calls each module with the Highcharts static object before charts are created.
+With Highcharts 13, import modules from the ESM build before registering the shared Highcharts instance. Older Highcharts factory modules can still be passed as additional `ChartModule.forRoot(...)` arguments.
 
 ```ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ChartModule } from '@stackline/angular-highcharts';
-
-declare var require: any;
+import Highcharts from 'highcharts/esm/highcharts.js';
+import 'highcharts/esm/highcharts-more.js';
+import 'highcharts/esm/modules/solid-gauge.js';
+import 'highcharts/esm/modules/heatmap.js';
+import 'highcharts/esm/modules/data-sorting.js';
+import 'highcharts/esm/modules/treemap.js';
+import 'highcharts/esm/modules/funnel.js';
 
 @NgModule({
   imports: [
     BrowserModule,
-    ChartModule.forRoot(
-      require('highcharts'),
-      require('highcharts/highcharts-more'),
-      require('highcharts/modules/solid-gauge'),
-      require('highcharts/modules/heatmap'),
-      require('highcharts/modules/treemap'),
-      require('highcharts/modules/funnel')
-    )
+    ChartModule.forRoot(Highcharts)
   ]
 })
 export class AppModule {}
@@ -374,8 +378,8 @@ updateCandles(ohlcData: any[], volumeData: any[]) {
 | Options API | `<chart [options]="options">` |
 | Constructor switch | `<chart [type]="'StockChart'" [options]="options">` |
 | Directive events | `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>` |
-| Highcharts modules | more, 3d, heatmap, treemap, funnel, solid-gauge, stock, map, drilldown, sankey, dependency-wheel, networkgraph, sunburst, wordcloud, xrange, timeline, variwide, variable-pie, item, streamgraph, bullet, dumbbell, lollipop, pareto, histogram-bellcurve, tilemap, venn, arc-diagram, organization, flowmap, geoheatmap, pictorial, contour, pointandfigure, renko |
+| Highcharts modules | more, 3d, heatmap, data-sorting, treemap, funnel, solid-gauge, stock, map, drilldown, sankey, dependency-wheel, networkgraph, sunburst, wordcloud, xrange, timeline, variwide, variable-pie, item, streamgraph, bullet, dumbbell, lollipop, pareto, histogram-bellcurve, tilemap, venn, arc-diagram, organization, flowmap, geoheatmap, pictorial, contour, pointandfigure, renko |
 
 ## License
 
-MIT
+The Stackline Angular wrapper is licensed under MIT. Highcharts is a separate peer dependency owned by Highsoft and is subject to the [Highcharts license terms](https://www.highcharts.com/license); consumers are responsible for an appropriate Highcharts license.
