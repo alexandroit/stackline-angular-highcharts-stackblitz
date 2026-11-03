@@ -15,7 +15,7 @@
     "@angular/platform-browser": "^20.3.18",
     "@angular/platform-browser-dynamic": "^20.3.18",
     "@stackline/angular-highcharts": "20.0.0",
-    "highcharts": "12.6.0",
+    "highcharts": "12.6.2",
     "rxjs": "^7.8.2",
     "zone.js": "~0.15.1",
     "tslib": "^2.3.0"
